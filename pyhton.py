@@ -51,3 +51,45 @@ car.car_info()
 list_cars.append(car)
 
 print(list_cars)
+
+for car in list_cars:
+    if car.year >= 2020:
+        print(car.model)
+
+for car in list_cars:
+    if "Sunroof" in car.features or "6 Airbags" in car.features:
+        print(car.model)
+
+print(list_cars)
+
+car1 = [ ]
+car2 = [ ]
+
+for car in list_cars:
+    AB_count = 0
+    
+    for feature in car.features:
+        if "Airbags" in feature:
+            AB_count = int(feature.split()[0])
+                
+                   
+    if car.is4wd == True and AB_count >= 4 and ((car.fuel_type == "petrol" and car.CC >= 3.0) or (car.fuel_type == "diesel" and car.CC >= 2.0)):
+        
+        car1.append(car.model)
+    else:
+        car2.append(car.model)
+
+print("Safe cars :",car1)
+print('Unsafe cars:',car2) 
+
+lsit = [ ]
+for car in list_cars:
+    lsit.append(car.features[0])
+    
+lsit = [int(num.split()[0])for num in lsit]
+print(lsit)
+
+grt_four = [num for num in lsit if num >= 4]
+print(grt_four)
+
+print(car.price)
