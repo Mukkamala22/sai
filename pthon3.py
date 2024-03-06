@@ -1,0 +1,2 @@
+print("thankyouu")
+print("welcome")
